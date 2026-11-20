@@ -152,7 +152,7 @@ const hv = $('#heroVideo'), tc = $('#timecode');
 const tallMQ = matchMedia('(max-aspect-ratio: 1/1)');
 function setHeroSrc() {
   const want = tallMQ.matches ? hv.dataset.tall : hv.dataset.wide;
-  hv.style.objectPosition = tallMQ.matches ? '50% 50%' : '0% 50%';
+  hv.style.objectPosition = tallMQ.matches ? '50% 50%' : '0% 0%';
   if (hv.getAttribute('src') === want) return;
   hv.poster = want.replace('.mp4', '.jpg'); hv.src = want; hv.play().catch(() => {});
 }
