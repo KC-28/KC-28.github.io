@@ -10,9 +10,9 @@ const REELS = {
 };
 
 const LONG = [
+  ['1a6c00','3:05','Sold','Highlight · long-form story edit'],
   ['203c78','5:00','The Thread You Were Told','Story-driven YouTube edit'],
   ['b23d69','3:56','One Faithful Community','Parish community film'],
-  ['1a6c00','3:05','Sold','Long-form story edit'],
   ['fa0c20','2:51','Personal Story — Part 1','Documentary-style edit'],
   ['bab321','1:51','Personal Story — Part 2','Documentary-style edit'],
 ];
@@ -35,7 +35,7 @@ const PORTRAITS = [
 ];
 
 const CLIENTS = ['cerave','soj','ironpaws','ea','catakor','alyve','murad','bloom','drmelaxin','formulation','salvora','neutrogena','bluechef'];
-const TOOLS = [['photoshop','Adobe Photoshop'],['illustrator','Adobe Illustrator'],['premiere','Adobe Premiere Pro'],['capcut','CapCut'],['canva','Canva'],['figma','Figma'],['claude','Claude'],['krea','Krea'],['kling','Kling AI'],['higgsfield','Higgsfield'],['heygen','HeyGen'],['flow','Flow AI'],['elevenlabs','ElevenLabs'],['sora','Sora']];
+const TOOLS = [['photoshop','Adobe Photoshop'],['illustrator','Adobe Illustrator'],['premiere','Adobe Premiere Pro'],['capcut','CapCut'],['canva','Canva'],['figma','Figma'],['claude','Claude'],['krea','Krea'],['kling','Kling AI'],['higgsfield','Higgsfield'],['heygen','HeyGen'],['flow','Flow AI'],['elevenlabs','ElevenLabs'],['hyperframes','HyperFrames']];
 
 const PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
 const $ = (s, el = document) => el.querySelector(s);
@@ -139,14 +139,25 @@ document.querySelectorAll('[data-gallery]').forEach(g => {
 // ---------- Clients marquee & tools ----------
 const clientHTML = CLIENTS.map(c => `<img src="${IMG}client-${c}.webp" alt="${c}" loading="lazy">`).join('') + '<span class="txt">Mille Bag London</span>';
 $('#clients').innerHTML = clientHTML + clientHTML.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
-$('#tools').innerHTML = TOOLS.map(([f, n]) => `<div class="tool reveal" title="${n}"><img src="${IMG}tool-${f}.webp" alt="${n}" loading="lazy"></div>`).join('');
+$('#tools').innerHTML = TOOLS.map(([f, n]) => f === 'hyperframes'
+  ? `<div class="tool tool--text reveal" title="${n}"><span class="hf-mark" aria-hidden="true"></span>${n}</div>`
+  : `<div class="tool reveal" title="${n}"><img src="${IMG}tool-${f}.webp" alt="${n}" loading="lazy"></div>`).join('');
 
 // ---------- Nav, timecode, reveal ----------
 const nav = $('.nav');
 const onScroll = () => nav.classList.toggle('is-solid', scrollY > 40);
 addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-const hv = $('.hero__video'), tc = $('#timecode');
+const hv = $('#heroVideo'), tc = $('#timecode');
+const tallMQ = matchMedia('(max-aspect-ratio: 1/1)');
+function setHeroSrc() {
+  const want = tallMQ.matches ? hv.dataset.tall : hv.dataset.wide;
+  hv.style.objectPosition = tallMQ.matches ? '50% 50%' : '0% 50%';
+  if (hv.getAttribute('src') === want) return;
+  hv.poster = want.replace('.mp4', '.jpg'); hv.src = want; hv.play().catch(() => {});
+}
+setHeroSrc(); tallMQ.addEventListener('change', setHeroSrc);
+$('#watchSold').addEventListener('click', () => openLightbox(longItems, 0));
 const pad = n => String(Math.floor(n)).padStart(2, '0');
 (function tick() { const t = hv.currentTime || 0; tc.textContent = `00:00:${pad(t)}:${pad((t % 1) * 30)}`; requestAnimationFrame(tick); })();
 
