@@ -137,7 +137,7 @@ document.querySelectorAll('[data-gallery]').forEach(g => {
 });
 
 // ---------- Clients marquee & tools ----------
-const clientHTML = CLIENTS.map(c => `<img src="${IMG}client-${c}.webp" alt="${c}" loading="lazy">`).join('') + '<span class="txt">Mille Bag London</span>';
+const clientHTML = CLIENTS.map(c => `<img src="${IMG}client-${c}.webp?v=2" alt="${c}" decoding="async">`).join('') + '<span class="txt">Mille Bag London</span>';
 $('#clients').innerHTML = clientHTML + clientHTML.replace(/alt="[^"]*"/g, 'alt="" aria-hidden="true"');
 $('#tools').innerHTML = TOOLS.map(([f, n]) => f === 'hyperframes'
   ? `<div class="tool tool--text reveal" title="${n}"><span class="hf-mark" aria-hidden="true"></span>${n}</div>`
