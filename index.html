@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kevs Monato — Video Editor & Graphic Designer</title>
+<meta name="description" content="Kevs Monato (Kevs Creative) — video editor, graphic designer and AI content creator from Butuan City, Philippines. Short-form UGC, AI ads, long-form edits, brand kits and ad design.">
+<meta property="og:title" content="Kevs Monato — Video Editor & Graphic Designer">
+<meta property="og:description" content="Scroll-stopping short-form edits, AI ads and brand visuals.">
+<meta property="og:image" content="https://kc-28.github.io/assets/img/kc-card.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/kc-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a href="#top" class="nav__logo" aria-label="Kevs Creative home"><img src="assets/img/kc-logo.webp" alt="Kevs Creative logo"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="#reels">Reels</a>
+    <a href="#longform">Long-form</a>
+    <a href="#design">Design</a>
+    <a href="#about">About</a>
+  </nav>
+  <a href="#contact" class="btn btn--amber btn--sm">Hire me</a>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__bar hero__bar--top mono"><span><i class="rec"></i>REC</span><span>KEVS CREATIVE — SHOWREEL</span><span>BUTUAN CITY, PH</span></div>
+  <video class="hero__video" src="assets/showreel.mp4" poster="assets/showreel.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+  <div class="hero__shade"></div>
+  <div class="hero__content">
+    <p class="eyebrow mono">Rada Badi! — Portfolio 2026</p>
+    <h1 class="hero__title">Kevs<br>Monato</h1>
+    <p class="hero__sub">Video editor · Graphic designer · AI content creator.<br>I make scroll-stopping videos and visuals that help brands sell.</p>
+    <div class="hero__cta">
+      <a href="#reels" class="btn btn--amber"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch the reels</a>
+      <a href="#contact" class="btn btn--ghost">Work with me</a>
+    </div>
+  </div>
+  <div class="hero__bar hero__bar--bottom mono"><span>45 REELS · 5 LONG-FORM · 50+ DESIGNS</span><span class="tc" id="timecode">00:00:00:00</span></div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients" aria-label="Brands I've worked with">
+  <p class="mono clients__label">Brands and clients I've created for</p>
+  <div class="marquee"><div class="marquee__track" id="clients"></div></div>
+</section>
+
+<!-- STATS -->
+<section class="stats wrap">
+  <div><strong>45</strong><span>short-form reels and ads</span></div>
+  <div><strong>14</strong><span>brands and clients</span></div>
+  <div><strong>50+</strong><span>graphic design pieces</span></div>
+  <div><strong>14</strong><span>creative and AI tools</span></div>
+</section>
+
+<!-- REELS -->
+<section id="reels" class="section wrap">
+  <div class="section__head">
+    <p class="mono section__num">01 — Motion</p>
+    <h2>Short-form, UGC and AI ads</h2>
+    <p class="section__lead">Hook-first edits for TikTok, Reels and Shorts — direct-to-consumer ads, user-generated content, talking heads and fully AI-generated spots. Hover to preview, click to watch with sound.</p>
+  </div>
+  <div class="filters" role="tablist" aria-label="Filter reels" id="filters">
+    <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All <span>45</span></button>
+    <button class="chip" data-filter="short" role="tab" aria-selected="false">Short-form <span>12</span></button>
+    <button class="chip" data-filter="ai" role="tab" aria-selected="false">AI-generated ads <span>12</span></button>
+    <button class="chip" data-filter="ugc" role="tab" aria-selected="false">UGC &amp; talking head <span>12</span></button>
+    <button class="chip" data-filter="more" role="tab" aria-selected="false">More reels <span>9</span></button>
+  </div>
+  <div class="reels" id="reelGrid"></div>
+</section>
+
+<!-- LONG FORM -->
+<section id="longform" class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="mono section__num">02 — Long-form</p>
+      <h2>Long-form videos</h2>
+      <p class="section__lead">Story-driven YouTube edits and community films — pacing, music, captions and color, from first cut to final export.</p>
+    </div>
+    <div class="longform" id="longGrid"></div>
+  </div>
+</section>
+
+<!-- DESIGN -->
+<section id="design" class="section wrap">
+  <div class="section__head">
+    <p class="mono section__num">03 — Stills</p>
+    <h2>Graphic design</h2>
+    <p class="section__lead">Static ads, e-commerce funnels, brand kits, posters and portraits — built in Figma, Photoshop, Illustrator and Canva.</p>
+  </div>
+
+  <article class="project">
+    <header class="project__head"><span class="tag">Figma</span><h3>Static ad campaigns</h3><p>Two performance ad sets: <em>ascent</em> luxury scent diffusers and <em>ALYVE</em> personalised vitamins.</p></header>
+    <div class="gallery gallery--3" data-gallery="figma"></div>
+  </article>
+
+  <article class="project">
+    <header class="project__head"><span class="tag">E-commerce</span><h3>E-commerce funnel design</h3><p>Landing page, ads and offer creatives for Salvora Rhodiola Rosea — “Train harder. Recover faster. Stay focused.”</p></header>
+    <div class="gallery gallery--1" data-gallery="funnel"></div>
+  </article>
+
+  <article class="project">
+    <header class="project__head"><span class="tag">Brand kit</span><h3>CupMix — “Satisfy your cravings in every mix”</h3><p>Logo, menu board, promo posters and social ad set for a local snack and drinks brand. Created December 2023.</p></header>
+    <div class="gallery gallery--masonry" data-gallery="cupmix"></div>
+  </article>
+
+  <article class="project">
+    <header class="project__head"><span class="tag">Brand kit</span><h3>Kape sa Daplin — Tara Kape</h3><p>Logo and launch promos for a coffee shop in Butuan City: opening announcement, ₱39 drinks and barkada promo.</p></header>
+    <div class="gallery gallery--masonry" data-gallery="kape"></div>
+  </article>
+
+  <article class="project">
+    <header class="project__head"><span class="tag"><img src="assets/img/tool-canva.webp" alt="">Canva</span><h3>Canva e-commerce projects</h3><p>Sale banners and brand marks: FML Bags, KSI shoes, Firefeast fast food, Chef Diana's Spicy Food and Bille's Bakery.</p></header>
+    <div class="gallery gallery--3" data-gallery="ecom"></div>
+  </article>
+
+  <article class="project">
+    <header class="project__head"><span class="tag"><img src="assets/img/tool-photoshop.webp" alt="">Photoshop</span><h3>Creative portraits</h3><p>Birthday and milestone portraits for friends — celebrating 23rd birthdays and passing the 2024 PRC exam for social workers.</p></header>
+    <div class="portraits" data-gallery="portraits"></div>
+  </article>
+
+  <article class="project">
+    <header class="project__head"><span class="tag"><img src="assets/img/tool-photoshop.webp" alt="">Photoshop</span><h3>Lenten film posters</h3><p>Creative and cinematic film posters made for the Lenten season 2023 — <strong>Allelhuia, Alpha, Agony and New Light</strong>. From taking the pictures to editing them, these let me express my creativity in connection with my beliefs as a Christian. <em>Allelhuia, created April 2023 — inspired by the Eucharistic tradition of Lent.</em></p></header>
+    <div class="gallery gallery--4" data-gallery="posters"></div>
+  </article>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section section--alt about">
+  <div class="wrap about__grid">
+    <div class="about__photo">
+      <img src="assets/img/about-kevs.webp" alt="Kevs Monato smiling with arms crossed" loading="lazy">
+      <img class="about__mark" src="assets/img/kc-logo.webp" alt="" loading="lazy">
+    </div>
+    <div class="about__text">
+      <p class="mono section__num">04 — About me</p>
+      <h2>Hi, I'm Kevin Monato — Kevs.</h2>
+      <p>I'm a creative digital creator, AI video editor and graphic designer passionate about building modern digital experiences through clean visuals, branding and creative storytelling. I specialise in graphic design, video editing and creative AI content that helps brands stand out with a professional and modern identity.</p>
+      <p>I love editing short-form content because it lets me bring ideas to life and connect with people in a visual, engaging way. I've worked with international e-commerce brands like <strong>Mille Bag London</strong> and award-winning training centre <strong>Bluechef Global Academy</strong>, creating high-converting, scroll-stopping video content that makes sales.</p>
+      <p>I'm also part of digital media ministries — the <strong>Diocese of Butuan Social Communication Ministry (DBX SOCCOM)</strong>, <strong>OLAP SOCCOM</strong> and <strong>JAKITS SOCCOM</strong> — where I contribute to content creation and online communication for the community.</p>
+      <div class="roles mono"><span>Graphic designer</span><span>Video editor</span><span>Copywriter</span><span>Social media manager</span></div>
+      <div class="ministry">
+        <p class="mono">Pages I create for</p>
+        <div class="ministry__logos">
+          <img src="assets/img/ministry-olap.webp" alt="Our Lady of Assumption Parish — Altare Servo" loading="lazy">
+          <img src="assets/img/ministry-olap-2.webp" alt="Our Lady of Assumption Parish, Jabonga" loading="lazy">
+          <img src="assets/img/ministry-joy.webp" alt="JOY" loading="lazy">
+          <img src="assets/img/ministry-page.webp" alt="Ministry page logo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section class="section wrap">
+  <div class="section__head">
+    <p class="mono section__num">05 — Toolkit</p>
+    <h2>Tools I create with</h2>
+  </div>
+  <div class="tools" id="tools"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="mono section__num">06 — Contact</p>
+    <h2 class="contact__title">Let's make something<br>that <span>stops the scroll.</span></h2>
+    <div class="contact__grid">
+      <a class="contact__card" href="mailto:kevincharlesmonato@gmail.com">
+        <span class="mono">Email</span><strong>kevincharlesmonato@gmail.com</strong>
+      </a>
+      <a class="contact__card" href="https://wa.me/639153590079" target="_blank" rel="noopener">
+        <span class="mono">WhatsApp / Phone</span><strong>+63 915 359 0079</strong>
+      </a>
+      <div class="contact__card">
+        <span class="mono">Based in</span><strong>8600 Butuan City, Philippines</strong>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer wrap">
+  <img src="assets/img/avatar.jpg" alt="" class="footer__avatar" loading="lazy">
+  <div><strong>Kevs Monato</strong><span>Graphic &amp; video editor · Kevs Creative</span></div>
+  <a href="#top" class="mono footer__top">Back to top ↑</a>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+  <button class="lightbox__close" data-close aria-label="Close">✕</button>
+  <button class="lightbox__nav lightbox__nav--prev" data-prev aria-label="Previous">‹</button>
+  <div class="lightbox__stage" id="lbStage"></div>
+  <button class="lightbox__nav lightbox__nav--next" data-next aria-label="Next">›</button>
+  <p class="lightbox__cap mono" id="lbCap"></p>
+</dialog>
+
+<script src="main.js"></script>
+</body>
+</html>
